@@ -5,9 +5,16 @@
       "blocks": {
         "vendor": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
           }
         },
         "title": {
@@ -18,12 +25,6 @@
         "price": {
           "type": "price",
           "settings": {
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
           }
         },
         "quantity_selector": {
@@ -87,9 +88,9 @@
       },
       "block_order": [
         "vendor",
+        "variant_picker",
         "title",
         "price",
-        "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
