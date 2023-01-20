@@ -19,7 +19,7 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "variant_images"
+            "picker_type": "button"
           }
         },
         "price": {
