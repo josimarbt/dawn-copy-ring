@@ -3,6 +3,11 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
         "vendor": {
           "type": "text",
           "disabled": true,
@@ -15,11 +20,6 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button"
-          }
-        },
-        "title": {
-          "type": "title",
-          "settings": {
           }
         },
         "price": {
@@ -87,9 +87,9 @@
         }
       },
       "block_order": [
+        "title",
         "vendor",
         "variant_picker",
-        "title",
         "price",
         "quantity_selector",
         "buy_buttons",
