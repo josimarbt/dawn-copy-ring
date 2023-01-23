@@ -217,7 +217,7 @@
                     {% if featured_media.preview_image.width >= 416 %}
                       {{ featured_media.preview_image | image_url: width: 416 }} 416w,{% endif %},
                     {{ featured_media.preview_image | image_url }} {{ media.preview_image.width }}w
-                                          "
+                                                                                  "
                     src="{{ featured_media | image_url: width: 416 }}"
                     sizes="(min-width: {{ settings.page_width }}px) calc(({{ settings.page_width | minus: 100 | times: media_width | round }} - 4rem) / 4), (min-width: 990px) calc(({{ media_width | times: 100 }}vw - 4rem) / 4), (min-width: 750px) calc((100vw - 15rem) / 8), calc((100vw - 14rem) / 3)"
                     alt="{{ featured_media.alt | escape }}"
@@ -621,6 +621,7 @@
                   </div>
                 </div>
               </noscript>
+              hola  que onda
               {%- when 'buy_buttons' -%}
               <div {{ block.shopify_attributes }}>
                 <product-form class="product-form">
@@ -1009,7 +1010,7 @@
                       {% if featured_media.preview_image.width >= 416 %}
                         {{ featured_media.preview_image | image_url: width: 416 }} 416w,{% endif %},
                       {{ featured_media.preview_image | image_url }} {{ media.preview_image.width }}w
-                                              "
+                                                                                          "
                       src="{{ featured_media | image_url: width: 416 }}"
                       sizes="(min-width: {{ settings.page_width }}px) calc(({{ settings.page_width | minus: 100 | times: media_width | round }} - 4rem) / 4), (min-width: 990px) calc(({{ media_width | times: 100 }}vw - 4rem) / 4), (min-width: 750px) calc((100vw - 15rem) / 8), calc((100vw - 14rem) / 3)"
                       alt="{{ featured_media.alt | escape }}"
@@ -1194,13 +1195,15 @@
       if (! isIE()) 
         return;
       
-      const hiddenInput = document.querySelector('# {{ product_form_id }} input[name="id"]');
+
+
+      const hiddenInput = document.querySelector('#   {{ product_form_id }} input[name="id"]');
       const noScriptInputWrapper = document.createElement('div');
-      const variantSwitcher = document.querySelector('variant-radios[data-section=" {{ section.id }} "]') || document.querySelector('variant-selects[data-section=" {{ section.id }} "]');
-      noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper- {{ section.id }}').textContent;
+      const variantSwitcher = document.querySelector('variant-radios[data-section="   {{ section.id }} "]') || document.querySelector('variant-selects[data-section="   {{ section.id }} "]');
+      noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-   {{ section.id }}').textContent;
       variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
 
-      document.querySelector('#Variants- {{ section.id }}').addEventListener('change', function(event) {
+      document.querySelector('#Variants-   {{ section.id }}').addEventListener('change', function(event) {
         hiddenInput.value = event.currentTarget.value;
       });
     });
@@ -1217,8 +1220,8 @@
   <script type="application/ld+json">
     {
     "@context": "http://schema.org/",
-          "@type": "Product",
-          "name": {{ product.title | json }},
+                  "@type": "Product",
+                  "name": {{ product.title | json }},
     "url": {{ request.origin | append: product.url | json }},
     {% if seo_media -%}
       "image": [
@@ -1231,7 +1234,7 @@
     {%- endif %}
     "brand": {
     "@type": "Brand",
-            "name": {{ product.vendor | json }}
+                    "name": {{ product.vendor | json }}
     },
     "offers": [
     {%- for variant in product.variants -%}
