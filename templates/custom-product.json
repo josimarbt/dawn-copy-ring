@@ -1,7 +1,7 @@
 {
    "sections": {
      "main": {
-       "type": "ring-custom-builder",
+       "type": "main-custom-product",
        "blocks": {
          "title": {
            "type": "title",
