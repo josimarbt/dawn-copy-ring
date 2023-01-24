@@ -19,7 +19,18 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "variant_images"
+          }
+        },
+        "b62fac65-a967-4aaa-a406-581bda91842a": {
+          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {
+          }
+        },
+        "83528751-ce34-4a99-a04c-abc4c18dd158": {
+          "type": "dropdown_options",
+          "settings": {
+            "dropdown_size_width": true
           }
         },
         "price": {
@@ -40,11 +51,13 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
           }
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Materials",
             "icon": "leather",
@@ -54,6 +67,7 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Shipping & Returns",
             "icon": "truck",
@@ -63,6 +77,7 @@
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Dimensions",
             "icon": "ruler",
@@ -72,6 +87,7 @@
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Care Instructions",
             "icon": "heart",
@@ -81,6 +97,7 @@
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share"
           }
@@ -90,6 +107,8 @@
         "title",
         "vendor",
         "variant_picker",
+        "b62fac65-a967-4aaa-a406-581bda91842a",
+        "83528751-ce34-4a99-a04c-abc4c18dd158",
         "price",
         "quantity_selector",
         "buy_buttons",
