@@ -510,10 +510,11 @@
                   data-url="{{ product.url }}"
                   {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
-                    <fieldset class="js product-form__input">
+                    <fieldset style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 2px;" class="js product-form__input">
                       <legend class="form__label">{{ option.name }}</legend>
                       {%- for value in option.values -%}
-                        <input
+                        <div style="display: block; margin: 20px;">
+                          <input
                           type="radio"
                           id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                           name="{{ option.name }}"
@@ -526,8 +527,9 @@
                           class="image-swatch"
                           style="background-image: url({{ value | append: '.png' | file_url }}); max-width: 90px; max-height: 90px;"
                           for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                          <span>{{ value }}</span>
                         </label>
+                        <span style="display: block;">{{ value }}</span>
+                        </div>
                       {%- endfor -%}
                     </fieldset>
                   {%- endfor -%}
@@ -645,14 +647,29 @@
                   </div>
                 </div>
               {% endif %}
-              <div>
-                <label class="form__label">Engraving</label>
-                <input
-                  type="text"
-                  id="custom-engraving"
-                  form="{{ product_form_id }}"
-                  name="properties[Engraving]">
-              </div>
+                <div style="display: block;">
+                  <label for="custom-engraving" class="form__label">Engraving</label>
+                  <input
+                    type="text" class="custom-engraving"
+                    id="custom-engraving"
+                    form="{{ product_form_id }}"
+                    name="properties[Engraving]">
+                </div>
+                <span style="display: block;"><label class="form__label">Font Type</label></span>
+                <div style="display: flex;">
+                  <span style="display: block;">
+                    <input type="radio" id="font-custom" form="{{ product_form_id }}" name="properties[Font Type]" value="Script">
+                    <label for="font-custom" class="form__label">Script</label>
+                  </span>
+                  <span style="display: block; margin: 0px 20px;">
+                    <input type="radio" id="font-custom" form="{{ product_form_id }}" name="properties[Font Type]" value="Italic">
+                    <label for="font-custom"class="form__label">Italic</label>
+                  </span>
+                  <span style="display: block; margin: 0px 20px;">
+                    <input type="radio" id="font-custom" form="{{ product_form_id }}" name="properties[Font Type]" value="none">
+                    <label for="font-custom"class="form__label">None</label>
+                  </span>
+                </div>
               <div>
                 <label class="form__label">Upload Designs</label>
                 <input
