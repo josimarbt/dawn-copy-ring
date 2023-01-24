@@ -8,6 +8,11 @@
           "settings": {
           }
         },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
         "vendor": {
           "type": "text",
           "disabled": true,
@@ -31,11 +36,6 @@
           "type": "dropdown_options",
           "settings": {
             "dropdown_size_width": true
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {
           }
         },
         "quantity_selector": {
@@ -105,11 +105,11 @@
       },
       "block_order": [
         "title",
+        "price",
         "vendor",
         "variant_picker",
         "b62fac65-a967-4aaa-a406-581bda91842a",
         "83528751-ce34-4a99-a04c-abc4c18dd158",
-        "price",
         "quantity_selector",
         "buy_buttons",
         "description",
