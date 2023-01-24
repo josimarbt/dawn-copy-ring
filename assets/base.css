@@ -1786,7 +1786,6 @@ details[open] > .share-button__fallback {
 .customer select {
   cursor: pointer;
   padding: 0 1.5rem;
-  width: 20px;
   border: black 1px solid;
   line-height: calc(1 + 0.6 / var(--font-body-scale));
   margin: var(--inputs-border-width);
