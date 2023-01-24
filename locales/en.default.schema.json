@@ -793,6 +793,15 @@
             }
           }
         },
+        "dropdown_options": {
+          "name": "Dropdown Options",
+          "settings": {
+            "dropdown_size_width": {
+              "label": "Disabled Dropdown Options for Size & Width"
+            }
+          }
+        }
+        ,
         "buy_buttons": {
           "name": "Buy buttons",
           "settings": {
@@ -1667,7 +1676,16 @@
               }
             }
           }
-        },
+        }, 
+        "dropdown_options": {
+          "name": "Dropdown Options",
+          "settings": {
+            "dropdown_size_width": {
+              "label": "Enable Dropdown Options for Size & Width"
+            }
+          }
+        }
+        ,
         "buy_buttons": {
           "name": "Buy buttons",
           "settings": {

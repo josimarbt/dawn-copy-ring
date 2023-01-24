@@ -1784,10 +1784,34 @@ details[open] > .share-button__fallback {
 .select__select,
 .customer select {
   cursor: pointer;
+  padding: 0 1.5rem;
+  width: 20px;
+  border: black 1px solid;
   line-height: calc(1 + 0.6 / var(--font-body-scale));
-  padding: 0 2rem;
   margin: var(--inputs-border-width);
   min-height: calc(var(--inputs-border-width) * 2);
+}
+
+.custom-width .spb-productoptionswatch {
+  width: 70px;
+  height: 70px;
+  margin: 25px 10px 25px 0;
+}
+
+.custom-width .spb-productoptionswatchwrapper{
+  margin-right: 20px;
+  font-size: small;
+}
+
+.custom-inside .spb-productoptionswatch {
+  width: 70px;
+  height: 70px;
+  margin: 25px 10px 25px 0;
+}
+
+.custom-inside .spb-productoptionswatchwrapper{
+  margin-right: 20px;
+  font-size: small;
 }
 
 /* Field */
