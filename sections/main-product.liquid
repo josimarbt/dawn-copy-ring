@@ -524,7 +524,7 @@
                           {% endif %}>
                         <label
                           class="image-swatch"
-                          style="background-image: url({{ value | append: '.png' | file_url }});"
+                          style="background-image: url({{ value | append: '.png' | file_url }}); max-width: 90px; max-height: 90px;"
                           for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                           <span>{{ value }}</span>
                         </label>
@@ -606,7 +606,7 @@
                 </div>
               </noscript>
               {%- when 'dropdown_options' -%}
-              {%- if block.settings.dropdown_size_width === true -%}
+              {%- if block.settings.dropdown_size_width == true -%}
                 <div style="display: flex; margin-top: 30px;">
                   <div style="margin-right: 25px;">
                     <label class="form__label" for="custom-size">Size</label>

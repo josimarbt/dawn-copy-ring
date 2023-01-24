@@ -1795,23 +1795,33 @@ details[open] > .share-button__fallback {
 .custom-width .spb-productoptionswatch {
   width: 70px;
   height: 70px;
-  margin: 25px 10px 25px 0;
 }
 
 .custom-width .spb-productoptionswatchwrapper{
-  margin-right: 20px;
+  margin: 20px 20px 20px 0;
   font-size: small;
 }
 
 .custom-inside .spb-productoptionswatch {
   width: 70px;
   height: 70px;
-  margin: 25px 10px 25px 0;
 }
 
 .custom-inside .spb-productoptionswatchwrapper{
-  margin-right: 20px;
+  margin: 15px 7px 20px 0;
   font-size: small;
+}
+
+.custom-width span {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
+}
+
+.custom-inside span {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
 }
 
 /* Field */
