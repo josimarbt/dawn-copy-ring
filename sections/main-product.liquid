@@ -649,29 +649,42 @@
                   </div>
                 </div>
               {% endif %}
-                <div style="display: block;">
-                  <label for="custom-engraving" class="form__label">Engraving</label>
-                  <input
-                    type="text" class="custom-engraving"
-                    id="custom-engraving"
-                    form="{{ product_form_id }}"
-                    name="properties[Engraving]">
-                </div>
-                <span style="display: block;"><label class="form__label">Font Type</label></span>
-                <div style="display: flex;">
-                  <span style="display: block; margin-right: 20px;">
-                    <input type="radio" id="font-custom" form="{{ product_form_id }}" name="properties[Font Type]" value="None">
-                    <label for="font-custom">None</label>
-                  </span>
-                  <span style="display: block; margin: 0px 20px;">
-                    <input type="radio" id="font-custom" form="{{ product_form_id }}" name="properties[Font Type]" value="Italic">
-                    <label for="font-custom">Italic</label>
-                  </span>
-                  <span style="display: block; margin: 0px 20px;">
-                    <input type="radio" id="font-custom" form="{{ product_form_id }}" name="properties[Font Type]" value="Script">
-                    <label for="font-custom">Script</label>
-                  </span>
-                </div>
+              {%- when 'custom_engraving_field' -%}
+                {%- if block.settings.engraving_checkboxes == true -%}
+                  <div style="display: block;">
+                    <label for="custom-engraving" class="form__label">Engraving</label>
+                    <input
+                      type="text" class="custom-engraving"
+                      id="custom-engraving"
+                      form="{{ product_form_id }}"
+                      name="properties[Engraving]">
+                  </div>
+                  <span style="display: block;"><label class="form__label">Font Type</label></span>
+                  <div style="display: flex;">
+                    <span style="display: block; margin-right: 20px;">
+                      <input type="radio" id="font-custom" form="{{ product_form_id }}" name="properties[Font Type]" value="None">
+                      <label for="font-custom">None</label>
+                    </span>
+                    <span style="display: block; margin: 0px 20px;">
+                      <input type="radio" id="font-custom" form="{{ product_form_id }}" name="properties[Font Type]" value="Italic">
+                      <label for="font-custom">Italic</label>
+                    </span>
+                    <span style="display: block; margin: 0px 20px;">
+                      <input type="radio" id="font-custom" form="{{ product_form_id }}" name="properties[Font Type]" value="Script">
+                      <label for="font-custom">Script</label>
+                    </span>
+                  </div>
+                {%- elsif block.settings.change_fonts == true -%}
+                  <div class="custom-engraving-fonts">
+                    <label for="custom-engraving" class="form__label">Engraving</label>
+                    <input type="text" class="custom-engraving" id="custom_engraving" name="properties[Engraving]" form="{{ product_form_id }}">
+                    <select name="properties[Font Type]" onchange="getInputValue()" id="custom_engraving_fonts" form="{{ product_form_id }}">
+                      <option value="italic">Italic</option>
+                      <option value="script">Script</option>
+                      <option value="serif">Serif</option>
+                    </select>
+                  </div>
+              {%- endif -%}
               <div style="margin: 20px 0;">
                 <label class="form__label">Upload Designs</label>
                 <input
@@ -1412,8 +1425,27 @@
             "default": true
           }
         ]
-      }
-      , {
+      }, {
+        "type": "custom_engraving_field",
+        "name": "t:sections.main-product.blocks.custom_engraving_fonts.name",
+        "settings": [
+          {
+            "type": "select",
+            "id": "engraving_picker",
+            "options": [
+              {
+                "value": "engraving_checkboxes",
+                "label": "t:sections.main-product.blocks.custom_engraving_fonts.settings.engraving_picker.engraving_checkboxes.label"
+              },
+              {
+                "value": "custom_fonts",
+                "label": "t:sections.main-product.blocks.custom_engraving_fonts.settings.engraving_picker.custom_fonts.label"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "type": "buy_buttons",
         "name": "t:sections.main-product.blocks.buy_buttons.name",
         "limit": 1,

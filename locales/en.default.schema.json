@@ -802,6 +802,21 @@
           }
         }
         ,
+        "custom_engraving_field": {
+          "name": "Engraving Field",
+          "settings": {
+            "engraving_picker": {
+              "label": "Type", 
+              "engraving_checkboxes": {
+                "label": "Checkboxes Options"
+              },
+              "custom_fonts": {
+                "label": "Preview Fonts"
+              }
+            }
+          }
+        }
+        ,
         "buy_buttons": {
           "name": "Buy buttons",
           "settings": {
@@ -1682,6 +1697,20 @@
           "settings": {
             "dropdown_size_width": {
               "label": "Enable Dropdown Options for Size & Width"
+            }
+          }
+        },
+        "custom_engraving_field": {
+          "name": "Engraving Field",
+          "settings": {
+            "engraving_picker": {
+              "label": "Type", 
+              "engraving_checkboxes": {
+                "label": "Checkboxes Options"
+              },
+              "custom_fonts": {
+                "label": "Preview Fonts"
+              }
             }
           }
         }
