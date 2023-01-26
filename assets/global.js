@@ -70,6 +70,20 @@ function trapFocus(container, elementToFocus = container) {
   elementToFocus.focus();
 }
 
+//Here you can get the value of the engraving input text
+function getInputValue() {
+  let value = document.getElementById("custom_engraving");
+  let selectOptions = document.getElementById("custom_engraving_fonts").value;
+
+  if(selectOptions == 'italic') {
+    selectOptions.onchange(value.style.cssText = "font-family: 'Open Sans', sans-serif;");
+  } else if(selectOptions == 'script') {
+    selectOptions.onchange(value.style.cssText = "font-family: 'Roboto Mono', monospace;");
+  } else {
+    selectOptions.onchange(value.style.cssText = "font-family: 'Nunito', sans-serif;");
+  }
+};
+
 // Here run the querySelector to figure out if the browser supports :focus-visible or not and run code based on it.
 try {
   document.querySelector(":focus-visible");

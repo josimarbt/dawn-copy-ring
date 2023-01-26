@@ -650,7 +650,7 @@
                 </div>
               {% endif %}
               {%- when 'custom_engraving_field' -%}
-                {%- if block.settings.engraving_checkboxes == true -%}
+                {%- if block.settings.engraving_picker == 'engraving_checkboxes' -%}
                   <div style="display: block;">
                     <label for="custom-engraving" class="form__label">Engraving</label>
                     <input
@@ -674,7 +674,7 @@
                       <label for="font-custom">Script</label>
                     </span>
                   </div>
-                {%- elsif block.settings.change_fonts == true -%}
+                {%- elsif block.settings.engraving_picker == 'custom_fonts' -%}
                   <div class="custom-engraving-fonts">
                     <label for="custom-engraving" class="form__label">Engraving</label>
                     <input type="text" class="custom-engraving" id="custom_engraving" name="properties[Engraving]" form="{{ product_form_id }}">
@@ -1432,6 +1432,7 @@
           {
             "type": "select",
             "id": "engraving_picker",
+            "label": "t:sections.main-product.blocks.custom_engraving_field.settings.engraving_picker.label",
             "options": [
               {
                 "value": "engraving_checkboxes",

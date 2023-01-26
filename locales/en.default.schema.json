@@ -797,7 +797,7 @@
           "name": "Dropdown Options",
           "settings": {
             "dropdown_size_width": {
-              "label": "Disabled Dropdown Options for Size & Width"
+              "label": "Enable Dropdown Options for Size & Width"
             }
           }
         }
