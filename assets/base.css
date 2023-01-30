@@ -1792,6 +1792,11 @@ details[open] > .share-button__fallback {
   min-height: calc(var(--inputs-border-width) * 2);
 }
 
+.custom-engraving-fonts select {
+  max-width: 30%;
+  height: 40px;
+}
+
 .custom-width .spb-productoptionswatch {
   width: 70px;
   height: 70px;
@@ -1841,10 +1846,11 @@ details[open] > .share-button__fallback {
 }
 
 .custom-engraving {
-  width: 70%;
-  height: 45px;
+  width: 60%;
+  margin-right: 15px;
+  height: 40px;
   border-radius: 0%;
-  border: 1px solid black;
+  border: 1px solid #000;
 }
 
 /* Field */

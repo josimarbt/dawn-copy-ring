@@ -613,7 +613,7 @@
                   <div style="margin-right: 25px;">
                     <label class="form__label" for="custom-size">Size</label>
                     <select
-                    style="width: 20px;"
+                    style="width: 60px;"
                       class="select__select"
                       id="custom-size"
                       form="{{ product_form_id }}"
@@ -631,7 +631,7 @@
                   <div>
                     <label class="form__label" for="custom-width">Band Width</label>
                     <select
-                    style="width: 20px;"
+                    style="width: 60px;"
                       class="select__select"
                       id="custom-width"
                       form="{{ product_form_id }}"
@@ -678,7 +678,7 @@
                   <div class="custom-engraving-fonts">
                     <label for="custom-engraving" class="form__label">Engraving</label>
                     <input type="text" class="custom-engraving" id="custom_engraving" name="properties[Engraving]" form="{{ product_form_id }}">
-                    <select name="properties[Font Type]" onchange="getInputValue()" id="custom_engraving_fonts" form="{{ product_form_id }}">
+                    <select class="select__select" name="properties[Font Type]" onchange="getInputValue()" id="custom_engraving_fonts" form="{{ product_form_id }}">
                       <option value="italic">Italic</option>
                       <option value="script">Script</option>
                       <option value="serif">Serif</option>
@@ -1427,7 +1427,7 @@
         ]
       }, {
         "type": "custom_engraving_field",
-        "name": "t:sections.main-product.blocks.custom_engraving_fonts.name",
+        "name": "t:sections.main-product.blocks.custom_engraving_field.name",
         "settings": [
           {
             "type": "select",
@@ -1436,13 +1436,14 @@
             "options": [
               {
                 "value": "engraving_checkboxes",
-                "label": "t:sections.main-product.blocks.custom_engraving_fonts.settings.engraving_picker.engraving_checkboxes.label"
+                "label": "t:sections.main-product.blocks.custom_engraving_field.settings.engraving_picker.engraving_checkboxes.label"
               },
               {
                 "value": "custom_fonts",
-                "label": "t:sections.main-product.blocks.custom_engraving_fonts.settings.engraving_picker.custom_fonts.label"
+                "label": "t:sections.main-product.blocks.custom_engraving_field.settings.engraving_picker.custom_fonts.label"
               }
-            ]
+            ],
+            "default": "custom_fonts"
           }
         ]
       },
