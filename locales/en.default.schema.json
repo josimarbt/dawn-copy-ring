@@ -800,13 +800,12 @@
               "label": "Enable Dropdown Options for Size & Width"
             }
           }
-        }
-        ,
+        },
         "custom_engraving_field": {
           "name": "Engraving Field",
           "settings": {
             "engraving_picker": {
-              "label": "Type", 
+              "label": "Type",
               "engraving_checkboxes": {
                 "label": "Checkboxes Options"
               },
@@ -815,8 +814,7 @@
               }
             }
           }
-        }
-        ,
+        },
         "buy_buttons": {
           "name": "Buy buttons",
           "settings": {
@@ -1691,7 +1689,7 @@
               }
             }
           }
-        }, 
+        },
         "dropdown_options": {
           "name": "Dropdown Options",
           "settings": {
@@ -1704,7 +1702,7 @@
           "name": "Engraving Field",
           "settings": {
             "engraving_picker": {
-              "label": "Type", 
+              "label": "Type",
               "engraving_checkboxes": {
                 "label": "Checkboxes Options"
               },
@@ -1713,8 +1711,7 @@
               }
             }
           }
-        }
-        ,
+        },
         "buy_buttons": {
           "name": "Buy buttons",
           "settings": {
