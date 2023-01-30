@@ -32,16 +32,16 @@
           "settings": {
           }
         },
-        "67ece200-3c70-42aa-8014-b2314f73fb0b": {
-          "type": "custom_engraving_field",
-          "settings": {
-            "engraving_picker": "custom_fonts"
-          }
-        },
         "83528751-ce34-4a99-a04c-abc4c18dd158": {
           "type": "dropdown_options",
           "settings": {
             "dropdown_size_width": true
+          }
+        },
+        "67ece200-3c70-42aa-8014-b2314f73fb0b": {
+          "type": "custom_engraving_field",
+          "settings": {
+            "engraving_picker": "custom_fonts"
           }
         },
         "quantity_selector": {
@@ -115,8 +115,8 @@
         "vendor",
         "variant_picker",
         "b62fac65-a967-4aaa-a406-581bda91842a",
-        "67ece200-3c70-42aa-8014-b2314f73fb0b",
         "83528751-ce34-4a99-a04c-abc4c18dd158",
+        "67ece200-3c70-42aa-8014-b2314f73fb0b",
         "quantity_selector",
         "buy_buttons",
         "description",
